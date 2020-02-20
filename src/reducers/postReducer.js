@@ -9,11 +9,16 @@ export default function(state= initialState, action) {
   switch(action.type) {
     
     case FETCH_POSTS:
-      console.log('Faet')
       return {
         ...state,
         items: action.payload
       }
+    case NEW_POST:
+      console.log('actino called')
+      return {
+        ...state,
+        item: action.payload 
+      };
     default:
       return state;
   }
